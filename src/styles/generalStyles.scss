@@ -2,3 +2,75 @@
     margin: 0px;
     padding: 0px;
 }
+
+.font-inter-normal{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.font-marven-normal{
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.d-flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.d-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-button{
+    background: #DC4F57;
+    border-radius: 33.5px;
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.gray-button{
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7.5px);
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.transparent-button{
+    border: 2px solid #DC4F57;
+    border-radius: 33.5px;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.black-button{
+    background: #000000;
+    border-radius: 33.5px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.game-names{
+    background: rgba(66, 66, 66, 0.3);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15em;
+    font-variant: small-caps;
+    color: #FFFFFF;
+}
