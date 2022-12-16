@@ -1,7 +1,7 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./styles/styles.scss";
 import { ApiContext } from "./context/ApiContext.jsx";
+import Home from "./views/Home.jsx";
+import "./styles/styles.scss";
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
       <ApiContext>
         <Router>
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
           </Routes>
         </Router>
       </ApiContext>
