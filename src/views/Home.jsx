@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { UseApiContext } from '../context/ApiContext';
-import Banner from '../components/Banner/Banner';
+import Header from '../components/Header';
+import GamesList from '../components/GamesList';
 
 const Home = () => {
     // const {allGames, allGamesInOrder, gameById, carousel}=useContext(UseApiContext)
@@ -35,7 +36,8 @@ const Home = () => {
 
     return (
         <section className="home-container">
-            <Banner />
+            <Header />
+            <GamesList />
         </section>
     );
 };

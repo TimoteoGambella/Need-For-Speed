@@ -1,0 +1,36 @@
+.game {
+    width: 857px;
+    height: 252px;
+    border-radius: 10px;
+    .game-name {
+        position: relative;
+        z-index: 1;
+        top: 9%;
+        width: 485px;
+        height: 47px;
+        background: rgba(66, 66, 66, 0.3);
+        border-radius: 10px;
+        backdrop-filter: blur(25px);
+        h2 {
+            text-align: center;
+            font-size: 1.25rem;
+            letter-spacing: 0.15em;
+        }
+    }
+    .game-bannerImg {
+        position: absolute;
+    }
+    .game-mainImg {
+        position: relative;
+        z-index: 1;
+        top: 17%;
+        left: 2%;
+    }
+    button {
+        position: relative;
+        bottom: -7%;
+        right: -33%;
+        width: 324px;
+        height: 36px;
+    }
+}

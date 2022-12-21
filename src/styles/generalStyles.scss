@@ -26,6 +26,11 @@ h6 {
     font-weight: 400;
 }
 
+body{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
 // .font-inter-normal {
 //     font-family: 'Inter';
 //     font-style: normal;
@@ -87,13 +92,13 @@ h6 {
     color: #ffffff;
 }
 
-.game-names {
-    background: rgba(66, 66, 66, 0.3);
-    backdrop-filter: blur(25px);
-    border-radius: 10px;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.15em;
-    font-variant: small-caps;
-    color: #ffffff;
-}
+// .game-names {
+//     background: rgba(66, 66, 66, 0.3);
+//     backdrop-filter: blur(25px);
+//     border-radius: 10px;
+//     font-size: 20px;
+//     line-height: 24px;
+//     letter-spacing: 0.15em;
+//     font-variant: small-caps;
+//     color: #ffffff;
+// }
