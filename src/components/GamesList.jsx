@@ -10,6 +10,8 @@ const GamesList = () => {
     const [gameSelected, setGameSelected] = useState([]);
     const { idGame } = useParams();
 
+    const [gameId,setGameId]=useState("")
+
     useEffect(() => {
         if (idGame) {
             allGamesInOrder().then((games) => {
@@ -36,16 +38,31 @@ const GamesList = () => {
                     juego de Need for Speed.
                 </p>
             </div>
-            {idGame && <GameOpened gameSelected={gameSelected}/>}
+            {/* {idGame && <GameOpened gameSelected={gameSelected}/>} */}
+            {games.map((game) => (
+                    <>
+                        {gameId===game.id &&
+                            <GameOpened
+                                gameSelected={game}
+                                setIdGame={setGameId}
+                            />
+                        }
+                    </>
+            ))}
             <section className="gamesList d-flex-center">
                 {games.map((game) => (
-                    <Game
-                        key={game.id}
-                        id={game.id}
-                        bannerImg={game['banner-img']}
-                        mainImg={game['main-img']}
-                        gameName={game['game-name']}
-                    />
+                    <>
+                        {gameId!==game.id &&
+                            <Game
+                                key={game.id}
+                                id={game.id}
+                                bannerImg={game['banner-img']}
+                                mainImg={game['main-img']}
+                                gameName={game['game-name']}
+                                setIdGame={setGameId}
+                            />
+                        }
+                    </>
                 ))}
             </section>
         </>

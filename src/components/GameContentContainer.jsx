@@ -14,7 +14,7 @@ const GameContentContainer = ({ game }) => {
             <article className="gameContentArticle">
                 <GameContent title={game['title-text-1']} text={game['description-text-1']} img={img1} />
                 <GameContent title={game['title-text-2']} text={game['description-text-2']} img={img2} />
-                <GameContent title={game['title-text-3']} text={game['description-text-3']} />
+                <GameContent title={game['title-text-3']} text={game['description-text-3']} img={img1} imgNone={true}/>
                 <GameContent title={game['title-text-4']} text={game['description-text-4']} img={img3} />
                 <div className="gameContentFooter d-flex-center d-flex-column">
                     <h4>{game['sub-footer-title']}</h4>

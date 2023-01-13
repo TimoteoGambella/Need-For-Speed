@@ -19,7 +19,7 @@ const GameDetail = () => {
     return (
         <>
             <Navbar />
-            <GameOpened gameSelected={game} />
+            <GameOpened gameSelected={game} gameDetailPage={true}/>
             <Carousel />
             <GameContentContainer game={game} />
             <Footer />

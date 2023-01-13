@@ -9,12 +9,8 @@ import logoStellar from '../assets/logo-stellar.png';
 import logoCriterion from '../assets/logo-criterion.png';
 import logoEsrb from '../assets/logo-esrb.png';
 
-const GameOpened = ({ gameSelected }) => {
+const GameOpened = ({ gameSelected, gameDetailPage, setIdGame }) => {
     const location = useLocation();
-
-    const handleLocation = () => {
-        return location.pathname === `/gameSelected/${gameSelected.id}` ? true : false;
-    };
 
     return (
         <section className="gameOpened d-flex-center d-flex-column">
@@ -39,18 +35,16 @@ const GameOpened = ({ gameSelected }) => {
                         src={gameSelected['main-img']}
                         alt={gameSelected['game-name']}
                     />
-                    <Link to={'/'}>
-                        <button className="gray-button">
-                            <div className="d-flex-center">
-                                <img src={arrowUp}></img>
-                                <p>Comprar</p>
-                                <img src={arrowUp}></img>
-                            </div>
-                        </button>
-                    </Link>
+                    <button className="gray-button" onClick={()=>setIdGame("")}>
+                        <div className="d-flex-center">
+                            <img src={arrowUp}></img>
+                            <p>Comprar</p>
+                            <img src={arrowUp}></img>
+                        </div>
+                    </button>
                 </div>
             </div>
-            {handleLocation() && (
+            {gameDetailPage===undefined && (
                 <div className="gameSelectedPlatforms">
                     <div className="gameSelectedPlatforms-blur d-flex-center d-flex-column">
                         <ul className="d-flex-center">
