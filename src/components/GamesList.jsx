@@ -23,7 +23,7 @@ const GamesList = () => {
         } else {
             allGamesInOrder().then((games) => setGames(games));
         }
-    }, [idGame]);
+    }, [idGame]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>  
