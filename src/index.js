@@ -8,3 +8,9 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+
+// window.scrollTo({
+//   top: 0,
+//   behavior: "auto",
+// });
