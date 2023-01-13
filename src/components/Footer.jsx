@@ -8,16 +8,9 @@ import eaLogo from '../assets/logo-ea-color.png';
 const Footer = () => {
     const workTeam = [
         {
-            id: '1',
-            name: 'Valentino Lorenti',
-            rol: 'UX / UI Designer',
-            linkedin: '#',
-            color: '#818C86',
-        },
-        {
             id: '2',
             name: 'Timoteo Gambella',
-            rol: 'Developer',
+            rol: 'Leader & Developer',
             linkedin: '#',
             color: '#62A368',
         },
@@ -28,6 +21,13 @@ const Footer = () => {
             linkedin: '#',
             color: '#AD3F3F',
         },
+        {
+            id: '1',
+            name: 'Valentino Lorenti',
+            rol: 'UX / UI Designer',
+            linkedin: '#',
+            color: '#818C86',
+        }
     ];
     return (
         <footer className="footerContainer">
