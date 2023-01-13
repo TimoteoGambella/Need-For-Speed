@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Maven+Pro&display=swap');
 
+@import "./mixins.scss";
+
+
 @import './generalStyles.scss';
 @import './components/banner.scss';
 @import './components/game.scss';
