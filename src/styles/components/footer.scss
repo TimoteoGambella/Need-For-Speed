@@ -1,0 +1,142 @@
+.footerContainer {
+    padding-top: 0.1rem;
+    background: #e4e7ec;
+}
+
+.footerTop {
+    padding-bottom: 4rem;
+    .footerBrand {
+        margin: 3rem 0;
+    }
+    .footerButtons {
+        gap: 7rem;
+        margin-top: 2.6rem;
+        button {
+            width: 254px;
+            height: 37px;
+        }
+    }
+}
+
+.footerLine {
+    width: 100%;
+    div {
+        width: 91%;
+        height: 2px;
+        background: #000000;
+        border-radius: 4.5px;
+    }
+}
+
+.footerMiddle {
+    height: 370px;
+    width: 100%;
+    background-image: url('../../assets/footer-fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    .footerMiddle-blur {
+        justify-content: space-evenly;
+        width: inherit;
+        height: inherit;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(25px);
+        p {
+            font-family: 'Maven Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.15rem;
+            letter-spacing: 0.155em;
+        }
+        .socialMedia {
+            width: 511px;
+            height: 47px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(25px);
+            border-radius: 56.5px;
+            ul {
+                width: 100%;
+                justify-content: space-evenly;
+                gap: 1rem;
+            }
+        }
+        .footerMenu {
+            width: 100%;
+            justify-content: space-evenly;
+        }
+        .footerLegals {
+            width: 95%;
+            height: 62px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 36px;
+            justify-content: space-evenly;
+            img {
+                width: 2.8%;
+                position: absolute;
+                left: 3rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+        }
+        .footerCopyright {
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+.footerBottom {
+    background-color: #0f0f14;
+    color: #000000;
+    .workTeamContainer {
+        background-color: #e4e7ec;
+        width: 97.5%;
+        margin: 1.3% 0;
+        border-radius: 20px;
+        h4 {
+            font-size: 1.8rem;
+            margin: 1.2rem 0;
+        }
+        .workTeam {
+            justify-content: space-around;
+            width: 65%;
+            background: #e4e7ec;
+            box-shadow: 0px 4px 50px 20px rgba(255, 255, 255, 0.7);
+            border-radius: 34px;
+            text-align: center;
+            margin: 2.5rem 0;
+            .collaborator {
+                padding: 2.5rem;
+                gap: 1.2rem;
+                .collaborator-logo {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+                .collaborator-info {
+                    letter-spacing: 0.155em;
+                    h3 {
+                        font-size: 1rem;
+                        margin-bottom: 0.8rem;
+                    }
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+                .collaborator-linkedin {
+                    border: 1px solid #000000;
+                    border-radius: 24.5px;
+                    width: 150px;
+                    height: 25px;
+                    p {
+                        font-size: 0.7rem;
+                        letter-spacing: 0.155em;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

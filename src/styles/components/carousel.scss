@@ -1,0 +1,30 @@
+.carouselContainer {
+    position: relative;
+    margin-top: 6rem;
+    .carousel-arrows {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        justify-content: space-between;
+        .carousel-prev,
+        .carousel-next {
+            cursor: pointer;
+            width: 90px;
+            margin: 0 3.5rem;
+        }
+        .carousel-next {
+            transform: rotate(180deg);
+        }
+    }
+    .carousel-prev:hover,
+    .carousel-next:hover {
+        opacity: 70%;
+        transition: ease 0.3s;
+    }
+    .swiper {
+        img {
+            width: 100%;
+        }
+    }
+}

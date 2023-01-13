@@ -1,0 +1,32 @@
+.gameContent {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(50px);
+    .gameContent-img {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    .gameContent-text {
+        height: 277px;
+        width: 50%;
+        gap: 2rem;
+        text-align: left;
+        padding: 0 1.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        h4 {
+            margin-top: 1rem;
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+        }
+        p {
+            font-size: 0.94rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.gameContent:nth-child(even) {
+    flex-direction: row-reverse;
+}

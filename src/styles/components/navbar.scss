@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: flex-end;
+    .brand-logo {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+    .logo-1 {
+        width: 180px;
+    }
+    .logo-2 {
+        width: 328px;
+        position: relative;
+        right: 2rem;
+    }
+    ul {
+        gap: 0.9rem;
+        margin: 4.4rem 2rem 0 0;
+        li {
+            width: 156px;
+            height: 30px;
+            background: #000000;
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        li:first-child {
+            border: 1px solid #ffffff;
+            border-radius: 33.5px;
+        }
+    }
+}
