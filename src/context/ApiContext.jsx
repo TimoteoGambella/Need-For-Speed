@@ -1,10 +1,12 @@
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, getDocs, query, collection, orderBy, getDoc, doc } from 'firebase/firestore';
 
 export const UseApiContext = createContext();
 
 export const ApiContext = ({ children }) => {
+    const [loading, setLoading] = useState(true);
+
     const firebaseConfig = {
         apiKey: 'AIzaSyBPKOLvCWALG_XUxqgUzeBMx4AhI3iZG5w',
         authDomain: 'needforspeed-179f5.firebaseapp.com',
@@ -18,15 +20,6 @@ export const ApiContext = ({ children }) => {
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-
-    const allGames = async () => {
-        // LLAMADA SIMPLE PARA OBTENER TODOS LOS GAMES DE LA BASE DE DATOS
-        const gamesNFS = await getDocs(query(collection(db, 'GamesNFS')));
-        const games = gamesNFS.docs.map((doc) => {
-            return { id: doc.id, ...doc.data() };
-        });
-        return games;
-    };
 
     const allGamesInOrder = async () => {
         // REVISAR EN LA DOCUMENTACION DE FIREBASE COMO LLAMAR DOCUMENTOS POR ORDEN DE UN PARAMETRO.
@@ -53,7 +46,7 @@ export const ApiContext = ({ children }) => {
     };
 
     return (
-        <UseApiContext.Provider value={{ allGames, allGamesInOrder, gameById, carousel }}>
+        <UseApiContext.Provider value={{ loading, setLoading, allGamesInOrder, gameById, carousel }}>
             {children}
         </UseApiContext.Provider>
     );

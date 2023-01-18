@@ -1,24 +1,33 @@
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Game = ({ id, bannerImg, mainImg, gameName, setIdGame }) => {
+    const handleScroll = () => {
+        const section = document.querySelector('#headerText');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
-        <div className="game">
+        <motion.div
+            className="game"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+        >
             <div className="game-name d-flex-center">
                 <h2>{gameName}</h2>
             </div>
             <img className="game-bannerImg" src={bannerImg} alt={gameName} />
             <img className="game-mainImg" src={mainImg} alt={gameName} />
-            {/* <Link to={`/gameSelected/${id}`}>
-                <button className="gray-button">Comprar</button>
-            </Link> */}
-                <button onClick={()=>{
-                window.scrollTo({
-                    top: 750,
-                    behavior: "smooth",
-                    });
+            <button
+                onClick={() => {
                     setIdGame(id);
-                }} className="gray-button">Comprar</button>
-        </div>
+                    handleScroll();
+                }}
+                className="gray-button"
+            >
+                Comprar
+            </button>
+        </motion.div>
     );
 };
 

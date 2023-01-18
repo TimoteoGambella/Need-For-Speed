@@ -4,30 +4,34 @@ import facebook from '../assets/logo-facebook.png';
 import instagram from '../assets/logo-instagram.png';
 import youtube from '../assets/logo-youtube.png';
 import eaLogo from '../assets/logo-ea-color.png';
+import timoteo from '../assets/timoteo.jpeg';
+import gaston from '../assets/gaston.jpg';
+import valentino from '../assets/valentino.jpeg';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({ setGameId }) => {
     const workTeam = [
         {
-            id: '2',
+            id: '1',
             name: 'Timoteo Gambella',
             rol: 'Leader & Developer',
-            linkedin: '#',
-            color: '#62A368',
+            linkedin: 'https://www.linkedin.com/in/timoteo-gambella-4b6418210/',
+            img: `${timoteo}`,
+        },
+        {
+            id: '2',
+            name: 'Gaston Avogadro',
+            rol: 'Developer',
+            linkedin: 'https://www.linkedin.com/in/gaston-avogadro/',
+            img: `${gaston}`,
         },
         {
             id: '3',
-            name: 'Gaston Avogadro',
-            rol: 'Developer',
-            linkedin: '#',
-            color: '#AD3F3F',
-        },
-        {
-            id: '1',
             name: 'Valentino Lorenti',
             rol: 'UX / UI Designer',
-            linkedin: '#',
-            color: '#818C86',
-        }
+            linkedin: 'https://www.linkedin.com/in/valentino%2Dlorenti%2Dux/',
+            img: `${valentino}`,
+        },
     ];
     return (
         <footer className="footerContainer">
@@ -66,7 +70,18 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footerMenu d-flex-center">
-                        <p>Explorar Juegos</p>
+                        <Link
+                            to={'/'}
+                            onClick={() => {
+                                setGameId('');
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth',
+                                });
+                            }}
+                        >
+                            <p>Explorar Juegos</p>
+                        </Link>
                         <p>Ultimas Noticias</p>
                         <p>Centro de Ayuda</p>
                     </div>
@@ -93,15 +108,17 @@ const Footer = () => {
                     <div className="workTeam d-flex-center">
                         {workTeam.map((person) => (
                             <div className="collaborator d-flex-center d-flex-column" key={person.id}>
-                                <div
-                                    className="collaborator-logo"
-                                    style={{ background: `${person.color}` }}
-                                ></div>
+                                <div className="collaborator-logo">
+                                    <img src={person.img}></img>
+                                </div>
                                 <div className="collaborator-info">
                                     <h3>{person.name}</h3>
                                     <p>{person.rol}</p>
                                 </div>
-                                <a href={person.linkedin} className="collaborator-linkedin d-flex-center">
+                                <a
+                                    href={person.linkedin}
+                                    className="collaborator-linkedin d-flex-center"
+                                >
                                     <p>Linkedin Profile</p>
                                 </a>
                             </div>

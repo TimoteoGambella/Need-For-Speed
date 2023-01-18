@@ -1,23 +1,29 @@
-// SCREENS PREDETERMIANDAS
+// SCREENS PREDETERMINADAS
 
 @mixin screen_1001 {
     @media (max-width: 1001px) {
-      @content;
+        @content;
     }
-  }
-  
-  @mixin screen_768 {
+}
+
+@mixin screen_768 {
     @media (max-width: 768px) {
-      @content;
+        @content;
     }
-  }
-  
-  @mixin screen_601 {
+}
+
+@mixin screen_601 {
     @media (max-width: 601px) {
-      @content;
+        @content;
     }
-  }
-  
+}
+
+@mixin screen_1714 {
+    @media (min-width: 1714px) {
+        @content;
+    }
+}
+
 //   @include screen_1001{
-    //   color:black
+//   color:black
 // }

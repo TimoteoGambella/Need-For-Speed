@@ -63,6 +63,9 @@
         .footerMenu {
             width: 100%;
             justify-content: space-evenly;
+            a{
+                color: inherit;
+            }
         }
         .footerLegals {
             width: 95%;
@@ -113,7 +116,10 @@
                 .collaborator-logo {
                     width: 100px;
                     height: 100px;
-                    border-radius: 50%;
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
                 }
                 .collaborator-info {
                     letter-spacing: 0.155em;

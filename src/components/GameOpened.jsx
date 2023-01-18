@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import arrowUp from '../assets/arrow-up.png';
 import logoXbox from '../assets/button-xbox.png';
 import logoEa from '../assets/logo-ea.png';
@@ -9,13 +9,11 @@ import logoStellar from '../assets/logo-stellar.png';
 import logoCriterion from '../assets/logo-criterion.png';
 import logoEsrb from '../assets/logo-esrb.png';
 
-const GameOpened = ({ gameSelected, gameDetailPage, setIdGame }) => {
-    const location = useLocation();
-
+const GameOpened = ({ gameSelected, gameDetailPage, setGameId }) => {
     return (
-        <section className="gameOpened d-flex-center d-flex-column">
+        <section className="gameOpened d-flex-center d-flex-column" id="gameOpened">
             <div className="gameSelected d-flex-center">
-                <div className="d-flex-center d-flex-column">
+                <div className="gameSelected-header d-flex-center d-flex-column">
                     <p>Compra Need for Speed™</p>
                     <h2>{gameSelected['game-name']}</h2>
                     <p>Selecciona una plataforma</p>
@@ -35,16 +33,19 @@ const GameOpened = ({ gameSelected, gameDetailPage, setIdGame }) => {
                         src={gameSelected['main-img']}
                         alt={gameSelected['game-name']}
                     />
-                    <button className="gray-button" onClick={()=>setIdGame("")}>
+                    <button
+                        className="gray-button"
+                        onClick={() => gameDetailPage === undefined && setGameId('')}
+                    >
                         <div className="d-flex-center">
-                            <img src={arrowUp}></img>
+                            <img src={arrowUp} alt=""></img>
                             <p>Comprar</p>
-                            <img src={arrowUp}></img>
+                            <img src={arrowUp} alt=""></img>
                         </div>
                     </button>
                 </div>
             </div>
-            {gameDetailPage===undefined && (
+            {gameDetailPage === undefined && (
                 <div className="gameSelectedPlatforms">
                     <div className="gameSelectedPlatforms-blur d-flex-center d-flex-column">
                         <ul className="d-flex-center">

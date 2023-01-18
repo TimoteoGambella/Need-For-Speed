@@ -2,18 +2,34 @@
     margin-top: 4rem;
     .gameSelected {
         flex-wrap: wrap;
-        div:first-child {
+        @include screen_1714 {
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            width: 90%;
+        }
+        .gameSelected-header {
             width: 857px;
             gap: 0.5rem;
+            @include screen_1714 {
+                max-width: 50%;
+                gap: 1rem;
+                margin-top: 5rem;
+            }
             p {
                 font-size: 0.8rem;
                 letter-spacing: 0.15em;
+                @include screen_1714 {
+                    font-size: 1.1rem;
+                }
             }
             h2 {
                 font-size: 1.25rem;
                 letter-spacing: 0.15em;
                 text-transform: uppercase;
                 margin-bottom: 0.6rem;
+                @include screen_1714 {
+                    font-size: 1.6rem;
+                }
             }
             span {
                 margin-top: 1.5rem;
@@ -21,12 +37,26 @@
                 border-radius: 1px;
                 width: 342px;
                 height: 2px;
+                @include screen_1714 {
+                    transform: rotate(90deg);
+                    position: absolute;
+                    width: 120px;
+                    right: 40%;
+                    margin-top: 0;
+                }
             }
         }
         .game {
             margin-top: 0.8rem;
             z-index: 1;
-            .gray-button div{
+            .game-name {
+                width: 60%;
+                h2 {
+                    margin-bottom: 0;
+                }
+            }
+
+            .gray-button div {
                 width: 100%;
                 justify-content: space-around;
                 gap: 3rem;
@@ -35,9 +65,8 @@
     }
     .gameSelectedPlatforms {
         margin-top: 1rem;
-        width: 1784px;
-        width: 1249px;
-        height: 518px;
+        width: 90%;
+        height: 90%;
         background-image: url('../../assets/modal-fondo.png');
         background-size: cover;
         background-repeat: no-repeat;
