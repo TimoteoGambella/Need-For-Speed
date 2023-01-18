@@ -9,7 +9,7 @@ import gaston from '../assets/gaston.jpg';
 import valentino from '../assets/valentino.jpeg';
 import { Link } from 'react-router-dom';
 
-const Footer = ({ setGameId }) => {
+const Footer = ({ gameId, setGameId }) => {
     const workTeam = [
         {
             id: '1',
@@ -73,11 +73,13 @@ const Footer = ({ setGameId }) => {
                         <Link
                             to={'/'}
                             onClick={() => {
-                                setGameId('');
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: 'smooth',
-                                });
+                                gameId && setGameId('');
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        top: 0,
+                                        behavior: 'smooth',
+                                    });
+                                }, 0);
                             }}
                         >
                             <p>Explorar Juegos</p>
@@ -109,7 +111,7 @@ const Footer = ({ setGameId }) => {
                         {workTeam.map((person) => (
                             <div className="collaborator d-flex-center d-flex-column" key={person.id}>
                                 <div className="collaborator-logo">
-                                    <img src={person.img}></img>
+                                    <img src={person.img} alt={person.name}></img>
                                 </div>
                                 <div className="collaborator-info">
                                     <h3>{person.name}</h3>
