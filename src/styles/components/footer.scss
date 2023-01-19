@@ -63,7 +63,7 @@
         .footerMenu {
             width: 100%;
             justify-content: space-evenly;
-            a{
+            a {
                 color: inherit;
             }
         }
@@ -73,6 +73,13 @@
             background: rgba(0, 0, 0, 0.4);
             border-radius: 36px;
             justify-content: space-evenly;
+            @include screen_1270 {
+                justify-content: center;
+                gap: 2rem;
+            }
+            @include screen_1100 {
+                gap: 1.2rem;
+            }
             img {
                 width: 2.8%;
                 position: absolute;
@@ -80,6 +87,12 @@
             }
             p {
                 font-size: 0.9rem;
+                @include screen_1270 {
+                    font-size: 0.8rem;
+                }
+                @include screen_1100 {
+                    font-size: 0.75rem;
+                }
             }
         }
         .footerCopyright {

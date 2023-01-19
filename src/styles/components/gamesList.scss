@@ -4,6 +4,9 @@
 
 #headerText{
     scroll-margin: -190px;
+    @include screen_1200{
+        scroll-margin: -220px;
+    }
 }
 
 .header-text {

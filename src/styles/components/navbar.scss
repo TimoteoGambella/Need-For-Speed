@@ -5,24 +5,44 @@ header {
         position: absolute;
         top: 2rem;
         left: 2rem;
+        @include screen_1200 {
+            top: 2.6rem;
+            left: 1rem;
+        }
     }
     .logo-1 {
         width: 180px;
+        @include screen_1200 {
+            width: 150px;
+        }
     }
     .logo-2 {
         width: 328px;
         position: relative;
         right: 2rem;
+        @include screen_1200 {
+            width: 298px;
+        }
     }
     ul {
         gap: 0.9rem;
         margin: 4.4rem 2rem 0 0;
+        @include screen_1270 {
+            gap: 0.3rem;
+            margin: 4.4rem 1rem 0 0;
+        }
         li {
             width: 156px;
             height: 30px;
             background: #000000;
+            @include screen_1270 {
+                width: 140px;
+            }
             p {
                 font-size: 0.8rem;
+                @include screen_1270 {
+                    font-size: 0.7rem;
+                }
             }
         }
         li:first-child {

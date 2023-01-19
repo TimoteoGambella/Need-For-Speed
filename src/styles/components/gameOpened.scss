@@ -84,6 +84,9 @@
                 gap: 2.5rem;
                 row-gap: 1.5rem;
                 margin-top: 4rem;
+                @include screen_1306 {
+                    width: 500px;
+                }
                 li {
                     width: fit-content;
                     img {
