@@ -6,6 +6,7 @@ export const UseApiContext = createContext();
 
 export const ApiContext = ({ children }) => {
     const [loading, setLoading] = useState(true);
+    const [scroll, setScroll] = useState(false);
 
     const firebaseConfig = {
         apiKey: 'AIzaSyBPKOLvCWALG_XUxqgUzeBMx4AhI3iZG5w',
@@ -40,13 +41,15 @@ export const ApiContext = ({ children }) => {
         // GENERAR EL LLAMADO A LA COLECCION "Carousel" de FIREBASE.
         const carouselImages = await getDocs(query(collection(db, 'Carousel')));
         const carouselData = carouselImages.docs.map((doc) => {
-          return { id: doc.id, ...doc.data() };
-      });
+            return { id: doc.id, ...doc.data() };
+        });
         return carouselData;
     };
 
     return (
-        <UseApiContext.Provider value={{ loading, setLoading, allGamesInOrder, gameById, carousel }}>
+        <UseApiContext.Provider
+            value={{ loading, setLoading, scroll, setScroll, allGamesInOrder, gameById, carousel }}
+        >
             {children}
         </UseApiContext.Provider>
     );

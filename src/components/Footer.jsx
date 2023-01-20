@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UseApiContext } from '../context/ApiContext';
 import nfsLogo from '../assets/logo-2-black.png';
 import twitter from '../assets/logo-twitter.png';
 import facebook from '../assets/logo-facebook.png';
@@ -7,9 +10,10 @@ import eaLogo from '../assets/logo-ea-color.png';
 import timoteo from '../assets/timoteo.jpeg';
 import gaston from '../assets/gaston.jpg';
 import valentino from '../assets/valentino.jpeg';
-import { Link } from 'react-router-dom';
 
 const Footer = ({ gameId, setGameId }) => {
+    const { setScroll } = useContext(UseApiContext);
+
     const workTeam = [
         {
             id: '1',
@@ -73,13 +77,8 @@ const Footer = ({ gameId, setGameId }) => {
                         <Link
                             to={'/'}
                             onClick={() => {
+                                setScroll(true);
                                 gameId && setGameId('');
-                                setTimeout(() => {
-                                    window.scrollTo({
-                                        top: 0,
-                                        behavior: 'smooth',
-                                    });
-                                }, 0);
                             }}
                         >
                             <p>Explorar Juegos</p>

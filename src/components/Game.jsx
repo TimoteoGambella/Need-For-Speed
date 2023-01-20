@@ -22,7 +22,6 @@ const Game = ({ id, bannerImg, mainImg, gameName, setIdGame }) => {
                 onClick={() => {
                     setIdGame(id);
                     setTimeout(()=>handleScroll(), 0);
-                    //handleScroll();
                 }}
                 className="gray-button"
             >
