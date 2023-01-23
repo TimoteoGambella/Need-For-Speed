@@ -13,8 +13,8 @@ const Banner = ({ setGameId }) => {
                     }}
                 >
                     <div className="brand-logo d-flex-center">
-                        <img className="logo-1" src={logo1}></img>
-                        <img className="logo-2" src={logo2}></img>
+                        <img className="logo-1" src={logo1} alt="logo"></img>
+                        <img className="logo-2" src={logo2} alt="logo"></img>
                     </div>
                 </Link>
                 <button className="red-button">Más información</button>
