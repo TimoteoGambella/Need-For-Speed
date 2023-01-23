@@ -9,7 +9,7 @@ export const ApiContext = ({ children }) => {
     const [scroll, setScroll] = useState(false);
 
     const firebaseConfig = {
-        apiKey: 'AIzaSyBPKOLvCWALG_XUxqgUzeBMx4AhI3iZG5w',
+        apiKey: '',
         authDomain: 'needforspeed-179f5.firebaseapp.com',
         databaseURL: 'https://needforspeed-179f5-default-rtdb.firebaseio.com',
         projectId: 'needforspeed-179f5',
